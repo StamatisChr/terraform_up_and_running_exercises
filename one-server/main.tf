@@ -5,14 +5,14 @@ provider "aws" {
 
 resource "aws_security_group" "instance" {
   name = "terraform-example-instance"
+}
 
-  ingress = {
-    from_port = 8080
-    to_port  = 8080
-    protocol = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-  
+resource "aws_vpc_security_group_ingress_rule" "allow_8080_ipv4" {
+  security_group_id = aws_security_group.instance.id
+  cidr_ipv4         = "0.0.0.0/0"
+  from_port         = 8080
+  ip_protocol       = "tcp"
+  to_port           = 8080
 }
 
 resource "aws_instance" "example" {
