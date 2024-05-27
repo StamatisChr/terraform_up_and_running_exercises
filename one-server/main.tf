@@ -33,3 +33,7 @@ resource "aws_instance" "example" {
   }
 
 }
+
+output "ec2instanceurl" {
+    value = "http://${aws_instance.example.public_dns}:8080"
+}
