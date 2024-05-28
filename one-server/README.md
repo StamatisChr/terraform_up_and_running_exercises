@@ -60,7 +60,7 @@ ec2instanceurl = "http://ec2-3-12-196-86.us-east-2.compute.amazonaws.com:8080"
 ```
 
 
-| ℹ️ Information                           | 
+| Information                           | 
 |------------------------------------------|
 | We will use ec2instanceurl = "http://ec2-3-12-196-86.us-east-2.compute.amazonaws.com:8080"
 |
