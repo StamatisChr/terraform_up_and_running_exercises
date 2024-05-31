@@ -7,10 +7,27 @@
 # Pre-requisites 
 - You must have Terraform version 1.x installed on your computer.
 - You must have an Amazon Web Services (AWS) account. 
+- You must have git install on your computer.
 
 This guide is written for MacOS.
 
-# First steps
+# Clone the repository to your computer
+
+Open your terminal.
+
+Clone the repository:
+```
+git clone git@github.com:StamatisChr/terraform_up_and_running_exercises.git
+```
+
+Change directory to <repo>/00-preface-hello-world:
+```
+cd terraform_up_and_running_exercises/00-preface-hello-world
+```
+
+
+# Configure AWS credentials
+
 Configure your AWS ACCESS KEY ID and  AWS SECRET ACCESS KEY as environment variables:
 
 ```
@@ -22,6 +39,9 @@ If you use session tokens configure also your session token as environment varia
 ```
 export AWS_SESSION_TOKEN=<paste your session token here>
  ```
+
+
+# Use Terraform
 
 Deploy the code:
 ```
