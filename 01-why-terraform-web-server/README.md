@@ -20,9 +20,9 @@ Clone the repository:
 git clone git@github.com:StamatisChr/terraform_up_and_running_exercises.git
 ```
 
-Change directory to *repo*/00-preface-hello-world:
+Change directory to *repo*/01-why-terraform-web-server:
 ```
-cd terraform_up_and_running_exercises/00-preface-hello-world
+cd terraform_up_and_running_exercises/01-why-terraform-web-server
 ```
 
 
