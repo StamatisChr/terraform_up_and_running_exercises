@@ -24,7 +24,7 @@ You will:
 
 ```git clone git@github.com:StamatisChr/terraform_up_and_running_exercises.git```
 
-Change directory to <repo>/one-server:
+Change directory to repo/one-server:
 
 ```cd terraform_up_and_running_exercises/one-server```
 
@@ -48,35 +48,6 @@ type **yes** when you are prompted for confirmation:
   Enter a value:
 ```
 
-wait for the infrastructure creation:
-
-```
-<snip>
-
-Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
-
-Outputs:
-ec2instanceurl = "http://ec2-3-12-196-86.us-east-2.compute.amazonaws.com:8080"
-```
-
-
-| Information                           | 
-|------------------------------------------|
-| We will use ec2instanceurl = "http://ec2-3-12-196-86.us-east-2.compute.amazonaws.com:8080"
-
-
-
-Wait 2 minutes to give time to the instance to configure.
-
-Open the url for the new instance and webserver
-
-http://ec2-3-12-196-86.us-east-2.compute.amazonaws.com:8080
-
-You should  see 
-
-```
-Hello, World
-```
 
 
 When done, you can remove the resources with terraform destroy, type:
