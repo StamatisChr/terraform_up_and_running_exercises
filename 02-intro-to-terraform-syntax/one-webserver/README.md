@@ -1,4 +1,6 @@
-
+| WARNING                          | 
+|------------------------------------------|
+| Please note that this guide will deploy real resources into your AWS account. Charges you may occur.  Keep an eye on your AWS account billing.
 
 ## Prerequisites
 
@@ -48,6 +50,34 @@ type **yes** when you are prompted for confirmation:
   Enter a value:
 ```
 
+```
+Outputs:
+public_ip = "3.133.154.182"
+```
+
+
+| Information                           | 
+|------------------------------------------|
+| We will use public_ip = "3.133.154.182" later.
+
+
+Wait 2 minutes to give time to the instance to configure.
+
+Check your webserver:
+```
+export PUBLIC_IP="3.133.154.182"
+```
+
+```
+curl http://$PUBLIC_IP:8080/
+```
+- output should be:
+   ```
+   Hello, World
+   ```
+
+
+
 
 
 When done, you can remove the resources with terraform destroy, type:
@@ -75,5 +105,3 @@ Destroy complete! Resources: 3 destroyed
 
 
 You are done. 
-
-book page 38
