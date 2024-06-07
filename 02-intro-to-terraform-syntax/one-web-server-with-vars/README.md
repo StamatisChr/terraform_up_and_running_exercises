@@ -50,6 +50,9 @@ type **yes** when you are prompted for confirmation:
   Enter a value:
 ```
 
+When the apply command completes, it will output the public IP address of the server. To test that IP:
+
+curl http://(server_public_ip):8080/
 
 
 When done, you can remove the resources with terraform destroy, type:
