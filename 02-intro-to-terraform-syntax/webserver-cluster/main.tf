@@ -10,11 +10,11 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region = "eu-central-1"
 }
 
 resource "aws_launch_configuration" "example" {
-  image_id        = "ami-0fb653ca2d3203ac1"
+  image_id        = "ami-01e444924a2233b07"
   instance_type   = "t2.micro"
   security_groups = [aws_security_group.instance.id]
 
