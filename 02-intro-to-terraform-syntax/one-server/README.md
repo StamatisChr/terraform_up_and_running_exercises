@@ -27,9 +27,9 @@ You will:
 
 ```git clone git@github.com:StamatisChr/terraform_up_and_running_exercises.git```
 
-Change directory to repo/one-server:
+Change directory to the current exercise::
 
-```cd terraform_up_and_running_exercises/one-server```
+```cd terraform_up_and_running_exercises/02-intro-to-terraform-syntax/one-server```
 
 ## Terraform
 

@@ -26,9 +26,9 @@ You will:
 
 ```git clone git@github.com:StamatisChr/terraform_up_and_running_exercises.git```
 
-Change directory to repo/one-web-server-with-vars:
+Change directory to Change directory to the current exercise:
 
-```cd terraform_up_and_running_exercises/one-web-server-with-vars```
+```cd terraform_up_and_running_exercises/02-intro-to-terraform-syntax/one-web-server-with-vars```
 
 ## Terraform
 
