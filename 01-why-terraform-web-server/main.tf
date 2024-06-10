@@ -23,21 +23,3 @@ resource "aws_instance" "app" {
               sudo service apache2 start
               EOF
 }
-
-variable "AWS_SECRET_ACCESS_KEY" {
-
-  default = ""
-  
-}
-
-variable "AWS_SECRET_ACCESS_KEY" {
-  
-  default = ""
-  
-}
-
-variable "AWS_SESSION_TOKEN" {
-
-  default = ""
-  
-}
