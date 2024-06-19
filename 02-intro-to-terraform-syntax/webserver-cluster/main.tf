@@ -1,10 +1,10 @@
 terraform {
-  required_version = ">= 1.0.0, < 2.0.0"
+  #required_version = ">= 1.0.0, < 2.0.0"
 
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
+      source = "hashicorp/aws"
+      #version = "~> 4.0"
     }
   }
 }
@@ -19,14 +19,14 @@ resource "aws_launch_configuration" "example" {
   security_groups = [aws_security_group.instance.id]
 
   user_data = <<-EOF
-              #!/bin/bash
+    #!/bin/bash
 
-              cat > index.html <<EOF
-              <p><span>Hello, World</span></p>
-              <h1><span>hostname $(hostname -s )</span></h1>
-              <h2><span>ip $(hostname -I)</span></h2
-              nohup busybox httpd -f -p ${var.server_port} &
-              EOF
+    echo "<p><span>Hello, World</span></p>" >> index.html
+    echo "<h1><span>hostname $(hostname -s )</span></h1>" >> index.html
+    echo "<h2><span>ip $(hostname -I)</span></h2>" >> index.html
+
+    nohup busybox httpd -f -p ${var.server_port} &
+  EOF
 
   # Required when using a launch configuration with an auto scaling group.
   lifecycle {
@@ -42,7 +42,7 @@ resource "aws_autoscaling_group" "example" {
   health_check_type = "ELB"
 
   min_size = 2
-  max_size = 10
+  max_size = 3
 
   tag {
     key                 = "Name"
