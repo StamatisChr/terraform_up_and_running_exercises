@@ -20,7 +20,11 @@ resource "aws_launch_configuration" "example" {
 
   user_data = <<-EOF
               #!/bin/bash
-              echo "Hello, World" > index.html
+
+              cat > index.html <<EOF
+              <p><span>Hello, World</span></p>
+              <h1><span>hostname $(hostname -s )</span></h1>
+              <h2><span>ip $(hostname -I)</span></h2
               nohup busybox httpd -f -p ${var.server_port} &
               EOF
 
@@ -71,7 +75,7 @@ data "aws_subnets" "default" {
 
 resource "aws_lb" "example" {
 
-  name               = var.alb_name
+  name = var.alb_name
 
   load_balancer_type = "application"
   subnets            = data.aws_subnets.default.ids
