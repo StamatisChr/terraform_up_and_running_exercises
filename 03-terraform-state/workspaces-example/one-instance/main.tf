@@ -7,14 +7,6 @@ terraform {
       version = "~> 4.0"
     }
   }
-
-  backend "s3" {
-    bucket         = "terraform-up-and-running-state-hhhahjsidgtwidstam"
-    key            = "workspaces-example/terraform.state"
-    region         = "us-east-2"
-    dynamodb_table = "terraform-up-and-running-locks"
-    encrypt        = true
-  }
 }
 
 provider "aws" {
@@ -26,4 +18,14 @@ resource "aws_instance" "example" {
 
   instance_type = terraform.workspace == "default" ? "t2.medium" : "t2.micro"
 
+}
+
+output "instance-type" {
+  value = aws_instance.example.instance_type
+  description = "EC2 instance type to see the different instance type per workspace"
+}
+
+output "current-workspace" {
+  value = terraform.workspace
+  description = "To show the terraform workspace the resources where deployed in"
 }
