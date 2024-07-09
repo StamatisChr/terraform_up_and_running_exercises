@@ -21,37 +21,29 @@ This guide assumes that you use MacOS and already have the following:
 
 - Terraform version 1.8.4 installed
 
-### What will you do if you follow  this guide?
-
-You will:
-- clone a github repo
-- specify an s3 bucket name
-- run `terraform apply`
-
 ## Github
 
 ### Clone the repository:
-
-```git clone git@github.com:StamatisChr/terraform_up_and_running_exercises.git```
+```
+git clone git@github.com:StamatisChr/terraform_up_and_running_exercises.git
+```
 
 Change directory to Change directory to the current exercise:
-
-```cd terraform_up_and_running_exercises/03-terraform-state/file-layout-example/global/s3```
-
-
-Open variables file with a text editor:
-
-```vim variables.tf```
-
-
-Replace "terraform-up-and-running-state-hhhahjsidgtwidstam" with another name on variable called bucket_name. \
-This name must be unique globally.
 ```
-variable "bucket_name" {
-  description = "The name of the S3 bucket. Must be globally unique."
-  type        = string
-  default     = "terraform-up-and-running-state-hhhahjsidgtwidstam"
-}
+cd terraform_up_and_running_exercises/03-terraform-state/file-layout-example/global/s3
+```
+
+Specify a bucket name and dynamoDB table name. Open variables tfvars file with a text editor:
+```
+vim variables.auto.tfvars
+```
+
+Add a bucket name. This name must be unique globally.
+Add a table name.
+
+```
+bucket_name = "<YOUR BUCKET NAME>"
+table_name  = "<YOUR TABLE NAME>"
 ```
 
 Save your changes.
@@ -60,40 +52,28 @@ Save your changes.
 ## Terraform
 
 Run terraform init, type:
-
-```terraform init```
+```
+terraform init
+```
 
 Run terraform apply, type:
 
-```terraform apply```
-
-type **yes** when you are prompted for confirmation:
-
 ```
-  Do you want to perform these actions?
-  Terraform will perform the actions described above.
-  Only 'yes' will be accepted to approve.
-
-  Enter a value:
+terraform apply
 ```
 
+- type **yes** when you are prompted for confirmation:
 
-When done, you can remove the resources with terraform destroy, type:
+
+
+
+Clean up when you are done, type:
 
 ```
 terraform destroy
 ```
-
-Type yes, when prompted:
-```
-    Do you really want to destroy all resources?
-    Terraform will destroy all your managed infrastructure, as shown above.
-    There is no undo. Only 'yes' will be accepted to confirm.
-    Enter a value: 
-```
+- Type yes, when prompted:
 
 
 Wait for the resources to be destroyed
 
-
-You are done. 

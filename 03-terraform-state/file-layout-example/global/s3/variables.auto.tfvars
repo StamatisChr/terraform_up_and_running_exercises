@@ -1,2 +1,2 @@
-bucket_name = "terraform-up-and-running-state-hhhahjsidgtwidstam"
-table_name  = "terraform-up-and-running-locks"
+bucket_name = "<YOUR BUCKET NAME>"
+table_name  = "<YOUR TABLE NAME>"

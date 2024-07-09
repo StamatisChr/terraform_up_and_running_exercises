@@ -10,14 +10,14 @@ terraform {
   
   backend "s3" {
 
-    # This backend configuration is filled in automatically at test time by Terratest. If you wish to run this example
-    # manually, uncomment and fill in the config below.
+    # # This backend configuration is filled in automatically at test time by Terratest. If you wish to run this example
+    # # manually, uncomment and fill in the config below.
 
-    bucket         = "stam-terraform-up-and-running-state-hhhahjsidgtw"
-    key            = "mysql/terraform.tfstate"
-    region         = "eu-central-1"
-    dynamodb_table = "stam-terraform-up-and-running-locks"
-    encrypt        = true
+    # bucket         = "stam-terraform-up-and-running-state-hhhahjsidgtw"
+    # key            = "mysql/terraform.tfstate"
+    # region         = "eu-central-1"
+    # dynamodb_table = "stam-terraform-up-and-running-locks"
+    # encrypt        = true
 
   }
 }
